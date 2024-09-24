@@ -5,7 +5,7 @@ h1{
     font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
         font-style: var(Bold); 
         text-align: center;
-        border: lightpink;
+        border: 5px solid pink;
 }
 h2 {
   
