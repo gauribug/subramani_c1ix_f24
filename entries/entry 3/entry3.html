@@ -28,13 +28,28 @@
             font-size: 25px;
         }
 
+ .image-gallery {
+    display: flex;           
+    flex-wrap: wrap;         
+    justify-content: space-between; 
+    gap: 10px;              
+    padding: 10px;           
+}
+
+.gallery-image {
+    width: 30%;              
+    height: auto;            
+    border-radius: 5px;      
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+}
+
     </style>
 
-    <p>
-        <img src="/Users/gauri/Desktop/subramani_c1ix_f24/entries/entry 3/assets/IMG_3293.jpeg" alt="flower1" style="width:400px;height:600px;"> 
-        <img src="/Users/gauri/Desktop/subramani_c1ix_f24/entries/entry 3/assets/IMG_3294.jpeg" alt="flower2" style="width:400px;height:600px;"> 
-        <img src="/Users/gauri/Desktop/subramani_c1ix_f24/entries/entry 3/assets/IMG_3296.jpeg" alt="flower3" style="width:400px;height:600px;">
-    </p>
+    <div class="image-gallery">
+        <img src="/Users/gauri/Desktop/subramani_c1ix_f24/entries/entry 3/assets/IMG_3293.jpeg" alt="Image 1" class="gallery-image">
+        <img src="/Users/gauri/Desktop/subramani_c1ix_f24/entries/entry 3/assets/IMG_3294.jpeg" alt="Image 2" class="gallery-image">
+        <img src="/Users/gauri/Desktop/subramani_c1ix_f24/entries/entry 3/assets/IMG_3296.jpeg" alt="Image 3" class="gallery-image">
+    </div>
 
     <div class="container">
         <div class="container-item" style="display: flexbox;"
