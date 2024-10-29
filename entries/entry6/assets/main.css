@@ -1,0 +1,100 @@
+@font-face {
+    font-family: "tan-mon-cheri";
+    src: url(tan-mon-cheri.woff) format(woff);
+}
+
+body {
+    background-color:aliceblue;
+}
+
+h1 {
+    font-family: "tan-mon-cheri";
+    font-size: 80px;
+    text-align: center;
+    color: rgb(174, 14, 78);
+}
+
+h1:hover {
+    color: rgb(255, 255, 255);
+    text-decoration: double;
+    text-shadow: 2px 2px 8px rgb(134, 15, 91);
+}
+
+h1 {
+    animation-name: bgColor-time-change;
+    animation-duration: 5s;
+    animation-fill-mode: forward;
+    animation-iteration-count: infinite;
+}
+
+@keyframes bgColor-time-change {
+    50% {
+        background-color: rgb(245, 112, 194);
+    }
+}
+
+.container {
+    background-color: rgb(255, 181, 239);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container-item {
+    background-color: rgb(255, 181, 239);
+    color: rgb(255, 255, 255);
+    text-align: center;
+    margin: 20px;
+    width: 70px;
+    flex-grow: 1;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 25px;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Smooth transition */
+    cursor: pointer; /* Makes it clear that it's clickable */
+}
+
+.gallery-image:hover {
+    background-color: rgb(255, 206, 239);
+    color: rgb(255, 215, 215); /* Change text color on hover */
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 10px;
+    padding: 10px;
+}
+
+.gallery-image {
+    width: 30%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.487);
+}
+
+@media (min-width: 800px) {
+    h1 {
+        font-size: 120px;
+    }
+}
+
+@media (max-width: 800px) {
+    h1 {
+        color: rgb(0, 0, 0);
+    }
+
+    .container-item {
+        font-size: 15px;
+    }
+
+    .gallery-image {
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.096);
+    }
+}
+
+@media (max-width: 800px) {
+    body {
+        background-color: aliceblue;
+    }
+}
