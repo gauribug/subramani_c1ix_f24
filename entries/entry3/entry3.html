@@ -1,63 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ballet-Inspired Sneakers</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <style>
+    @font-face {
+      font-family: "tan-mon-cheri";
+      src: url("assets/tan-mon-cheri.woff") format("woff");
+    }
+</style>
 <body>
-    <h1>Shoes</h1>
-
-    <style>
-        .container {
-            background-color: rgb(0, 0, 0);
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            
-        }
-    
-        .container-item {
-            background-color: rgb(172, 193, 248);
-            color: rgb(56, 170, 183);
-            text-align: center;
-            margin: 20px;
-            width: 70px;
-            flex-grow: 1;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 25px;
-        }
-
- .image-gallery {
-    display: flex;           
-    flex-wrap: wrap;         
-    justify-content: space-between; 
-    gap: 10px;              
-    padding: 10px;           
-}
-
-.gallery-image {
-    width: 30%;              
-    height: auto;            
-    border-radius: 5px;      
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
-}
-
-    </style>
-
-    <div class="image-gallery">
-        <img src="assets/IMG_3293.jpeg" alt="Image 1" class="gallery-image">
-        <img src="assets/IMG_3294.jpeg" alt="Image 2" class="gallery-image">
-        <img src="assets/IMG_3296.jpeg" alt="Image 3" class="gallery-image">
-    </div>
-
     <div class="container">
-        <div class="container-item" style="display: flexbox;"
-        flex-grow: ;
-        flex-shrink: ;
-        flex-basis: ;
-        >Ballet slipper-inspired shoes often blend elegance with comfort, evoking a sense of grace and femininity. Their soft materials and simple lines can be appealing, and they often offer versatility for various outfits. Plus, the aesthetic can evoke a sense of nostalgia or artistry, connecting to the beauty of ballet itself. Do you have a favorite pair?</div>
+        <div class="pagination">
+          <a href="entries/entry2/entry2.html" class="back">Back</a>
+          <a href="index.html" class="home">Home</a>
+          <a href="entries/entry4/entry4.html" class="next">Next</a>
+        </div>    
+        
+      
+  <div class="container">
+    <header class="header">
+      <h1>En Pointe</h1>
+      <p>Where comfort meets elegance—sneakers inspired by the grace of ballet.</p>
+    </header>
+    <section class="content">
+      <div class="highlight-container">
+        <a href="https://www.jwpei.com/products/flavia-ballerina-sneakers-silver">
+          <img src="assets/shoe4.jpg" alt="Feature Ballet Sneaker">
+        </a>
+        <div class="highlight-title">
+          <h2>Elegance in Every Step</h2>
+          <p>A perfect blend of flexibility, comfort, and timeless style.</p>
+        </div>
+      </div>
 
+      <div class="grid">
+        <div class="grid-item">
+          <a href="#link1">
+            <img src="assets/IMG_3293.jpeg" alt="Sneaker 1">
+          </a>
+          <p>The Prima: Classic sky tones with delicate ribbon details.</p>
+        </div>
+        <div class="grid-item">
+          <a href="#link2">
+            <img src="assets/IMG_3294.jpeg" alt="Sneaker 2">
+          </a>
+          <p>The Arabesque: Soft canvas with an elastic strap for a snug fit.</p>
+        </div>
+        <div class="grid-item">
+          <a href="#link3">
+            <img src="assets/IMG_3296.jpeg" alt="Sneaker 3">
+          </a>
+          <p>The Pirouette: Lace-inspired details paired with modern sneaker soles.</p>
+        </div>
+      </div>
+    </section>
+    <section class="pagination">
+        <a href="entries/entry2/entry2.html" class="back">Back</a>
+        <a href="index.html" class="home">Home</a>
+        <a href="entries/entry4/entry4.html" class="next">Next</a>
+      </section>
+    <footer class="footer">
+      <p>&copy; 2024 Ballet-Inspired Sneakers. All Rights Reserved.</p>
+    </footer>
+  </div>
 </body>
 </html>
