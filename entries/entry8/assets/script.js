@@ -1,23 +1,30 @@
 document.addEventListener('DOMContentLoaded', () => {
+    
     const typingText = document.getElementById('typing-text');
-    typingText.textContent = "Click once to reveal what's under the glass!";
-  });
+    typingText.textContent = "Hover to reveal what's under the glass!";
+    
+   
+    document.querySelectorAll('.gallery-item img').forEach(img => {
+      const originalSrc = img.src; 
+      const hoverSrc = img.dataset.hover; 
   
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      const typingText = document.getElementById('typing-text');
-      typingText.textContent = "Click again for more info!";
-      typingText.style.width = '0';
-      setTimeout(() => {
-        typingText.style.width = '100%';
-      }, 100);
+     
+      if (hoverSrc) {
+        img.addEventListener('mouseover', () => {
+          img.src = hoverSrc;
+        });
   
-      if (img.dataset.hover) {
-        img.src = img.dataset.hover;
+        img.addEventListener('mouseout', () => {
+          img.src = originalSrc;
+        });
       }
   
+    
       img.addEventListener('click', () => {
-        window.open(img.dataset.link, '_blank');
+        const link = img.dataset.link; 
+        if (link) {
+          window.open(link, '_blank'); 
+        }
       });
     });
   });

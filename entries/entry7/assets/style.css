@@ -1,0 +1,65 @@
+body {
+    margin: 0;
+    font-family: "sloop-script-one", sans-serif;
+    overflow: hidden;
+    background-color: #000000;
+  }
+  
+  .header {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 5rem;
+    text-align: center;
+    z-index: 10;
+    pointer-events: none;
+    color: #ffffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease; 
+}
+
+.header:hover {
+  background-color: #ffffff;
+  color: #000000; 
+}
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, 1in);
+    grid-auto-rows: 1in;
+    width: 100vw;
+    height: 100vh;
+  }
+  
+  .grid-item {
+    width: 1in;
+    height: 1in;
+    background-color: #000; 
+    background-size: cover;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+    animation: rotateInfinite 5s linear infinite; 
+}
+
+
+@keyframes rotateInfinite {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+  
+  
+  .grid-item.visible {
+    opacity: 1;
+  }
+  
+  .grid-item:hover {
+    opacity: 1;
+  }
+
+  
