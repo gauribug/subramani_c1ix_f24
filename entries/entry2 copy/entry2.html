@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flowers</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #fdf6e3;
+            margin: 0;
+            padding: 0;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 3em;
+            color: #4CAF50;
+        }
+
+        .vase-container {
+            position: relative;
+            margin: 30px auto;
+            width: 300px;
+            height: 300px;
+        }
+
+        .vase {
+            width: 100px;
+            height: 150px;
+            background: #8B5A2B;
+            border-radius: 50px 50px 0 0;
+            margin: auto;
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .flower {
+            position: absolute;
+            cursor: pointer;
+            transition: transform 0.3s ease;
+        }
+
+        .flower:hover {
+            transform: scale(1.2);
+        }
+
+        .flower1 {
+            top: 10px;
+            left: 30px;
+        }
+
+        .flower2 {
+            top: 10px;
+            right: 30px;
+        }
+
+        .flower3 {
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(-150%);
+        }
+
+        .flower4 {
+            bottom: 120px;
+            left: 50%;
+            transform: translateX(50%);
+        }
+
+        .info-box {
+            margin-top: 20px;
+        }
+
+        textarea {
+            width: 80%;
+            height: 100px;
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        textarea:focus {
+            outline: none;
+            border-color: #4CAF50;
+        }
+    </style>
+</head>
+<body>
+    <h1>Flowers</h1>
+    <div class="vase-container">
+        <img src="assets/IMG_3290.jpeg" alt="Flower 1" class="flower flower1" onclick="window.open('https://example.com/flower1')" width="50">
+        <img src="assets/IMG_3291.jpeg" alt="Flower 2" class="flower flower2" onclick="window.open('https://example.com/flower2')" width="50">
+        <img src="assets/IMG_3292.jpeg" alt="Flower 3" class="flower flower3" onclick="window.open('https://example.com/flower3')" width="50">
+        
+        <div class="vase"></div>
+    </div>
+    <div class="info-box">
+        <textarea placeholder="write about your favourite flower..."></textarea>
+    </div>
+</body>
+</html>

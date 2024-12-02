@@ -1,0 +1,86 @@
+/* General styling */
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-color: #fdf6e3;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    margin-top: 20px;
+    font-size: 3em;
+    color: #4CAF50;
+}
+
+/* Vase and container styling */
+.vase-container {
+    position: relative;
+    margin: 30px auto;
+    width: 300px;
+    height: 300px;
+}
+
+.vase {
+    width: 100px;
+    height: 150px;
+    background: #8B5A2B;
+    border-radius: 50px 50px 0 0;
+    margin: auto;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Flower styling */
+.flower {
+    position: absolute;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.flower:hover {
+    transform: scale(1.2);
+}
+
+.flower1 {
+    top: 10px;
+    left: 30px;
+}
+
+.flower2 {
+    top: 10px;
+    right: 30px;
+}
+
+.flower3 {
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(-150%);
+}
+
+.flower4 {
+    bottom: 120px;
+    left: 50%;
+    transform: translateX(50%);
+}
+
+/* Info box styling */
+.info-box {
+    margin-top: 20px;
+}
+
+textarea {
+    width: 80%;
+    height: 100px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: #4CAF50;
+}
