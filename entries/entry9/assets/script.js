@@ -1,23 +1,23 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const typingText = document.getElementById('typing-text');
-    typingText.textContent = "Click once to reveal what's under the glass!";
-  });
+    const imageMapping = {
+      '1.png': '4.png',
+      '2.png': '5.png',
+      '3.png': '6.png'
+    };
   
-  document.querySelectorAll('.gallery-item img').forEach(img => {
-    img.addEventListener('click', () => {
-      const typingText = document.getElementById('typing-text');
-      typingText.textContent = "Click again for more info!";
-      typingText.style.width = '0';
-      setTimeout(() => {
-        typingText.style.width = '100%';
-      }, 100);
+    const imageContainers = document.querySelectorAll('.image-container');
   
-      if (img.dataset.hover) {
-        img.src = img.dataset.hover;
-      }
-  
-      img.addEventListener('click', () => {
-        window.open(img.dataset.link, '_blank');
+    imageContainers.forEach(container => {
+      const img = container.querySelector('img');
+      container.addEventListener('click', () => {
+        const currentSrc = img.src.split('/').pop(); // Get the image file name
+        if (imageMapping[currentSrc]) {
+          container.classList.add('clicked'); // Add shake animation
+          setTimeout(() => {
+            container.classList.remove('clicked'); // Remove shake animation
+            img.src = `assets/${imageMapping[currentSrc]}`; // Replace with new image
+          }, 500);
+        }
       });
     });
   });

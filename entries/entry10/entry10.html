@@ -3,55 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Glass Gallery</title>
+  <title>Pomegranate</title>
   <link rel="stylesheet" href="https://use.typekit.net/ufn4lov.css">
   <link rel="stylesheet" href="assets/style.css">
-  <style>
-    @font-face {
-      font-family: "tan-mon-cheri";
-      src: url("assets/tan-mon-cheri.woff") format("woff");
-    }
-  </style>
+  <link rel="icon" type="image" href="assets/favicon.png">
 </head>
 <body>
-  
-  <div class="container">
-    <header class="header">
-      <nav class="pagination">
-        <a href="index.html">Home</a>
-        <a href="entries/entry7/entry7.html">Back</a>
-        <a href="entries/entry9/entry9.html">Next</a>
-      </nav>
-      <h1>Glass Gallery</h1>
-      <p id="typing-text" class="typing-text">Click once to reveal what's under the glass!</p>
-    </header>
-    <section class="gallery">
-      <div class="gallery-item">
-        <img src="assets/glass_1.png" alt="Glass Lily" data-hover="assets/nonglass_1.png" data-link="https://www.etsy.com/listing/1737198026/lovely-six-petal-art-glass-hand-blown?epik=dj0yJnU9ekRKcW1NNm5sc1dDMkU5TnFwYnZOdWdaQXAzLTRyOFcmcD0wJm49Z1FyRW5HS1lmZzNYeDVxZkllZkVkZyZ0PUFBQUFBR2ROSEs4">
-        <p>Lily</p>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/glass_2.png" alt="2 Dot Speckled Glasses" data-hover="assets/nonglass_2.png" data-link="https://us.maisonbalzac.com/products/pomponette-coupes">
-        <p>Dotty</p>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/glass_3.png" alt="Glass Lily of the Valley" data-hover="assets/nonglass_3.jpg" data-link="https://www.etsy.com/listing/1718167601/vivid-glass-flowers-dew-beads-bells">
-        <p>May Bells</p>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/glass_4.png" alt="Green Glass Head" data-hover="assets/nonglass_4.jpg" data-link="https://www.chairish.com/product/6984053/head-in-molded-glass-1980s?utm_content=PinterestFeed_Models+&+Figurines=&utm_source=pinterest&utm_term=6984053&epik=dj0yJnU9Sm5tWGlkMU82OUU1dDM0eDgyUEhkV3Jha0dpMzBPRkomcD0wJm49NVEtQ0xNT3BtYV9sYlhWT3ZEb094dyZ0PUFBQUFBR2ROTnZn">
-        <p>Goblin</p>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/glass_5.png" alt="Colorful Glass Orb" data-hover="assets/nonglass_5.jpg" data-link="https://flavieaudi.com/work-archive/fluid-rock-24/">
-        <p>Bubble</p>
-      </div>
-      <div class="gallery-item">
-        <img src="assets/glass_6.png" alt="Glass Orchid" data-hover="assets/nonglass_6.jpg" data-link="https://www.instagram.com/p/C6yRZErOANJ/?img_index=7&epik=dj0yJnU9Y0tUM1hmM3dWQ2lrSndGRFhhdzB0dExMRFBHb2d5QWMmcD0wJm49M19QaXJLenlxbnp3X3VUYTJ3bVVCQSZ0PUFBQUFBR2ROTjVJ">
-        <p>Orchid</p>
-      </div>
-    </section>
+  <!-- Background -->
+  <div class="background" style="background-image: url('assets/bkg-image.png');"></div>
+
+  <!-- Header -->
+  <div class="header">
+    Pomegranates?
+    </div>
+    
+    <div class="hover-text">
+      <p>Hint: There are 6 very special seeds</p>
+    </div>
   </div>
+  <div class="blinking-text top-left">Hover Around!</div>
+  <div class="blinking-text top-right">Hover Around!</div>
+
+  <!-- Numbers -->
+  <div class="hover-element" data-text="<h2>Fertility</h2>In ancient Greece and Rome, pomegranates were associated with fertility and were linked to the goddesses Aphrodite and Hera." style="top: 50%; left: 30%;">1</div>
+  <div class="hover-element" data-text="<h2>Death</h2>In Greek mythology, pomegranates were known as the 'fruit of the dead' because they were said to have come from the blood of Adonis." style="top: 60%; left: 40%;">2</div>
+  <div class="hover-element" data-text="<h2>Marriage</h2>In the Greek myth of Hades and Persephone, Hades used pomegranate seeds to trick Persephone into returning to the underworld." style="top: 60%; left: 65%;">3</div>
+  <div class="hover-element" data-text="<h2>Hope and Everlasting Life</h2>In ancient Judeo-Christian texts, pomegranates symbolized hope and everlasting life." style="top: 40%; left: 50%;">4</div>
+  <div class="hover-element" data-text="<h2>Righteousness</h2>In Judaism, pomegranates are a symbol of righteousness because they are said to contain 613 seeds." style="top: 70%; left: 70%;">5</div>
+  <div class="hover-element" data-text="<h2>Unity in Faith</h2>In Christian symbolism, the many seeds of a pomegranate represent the Church, unity in faith, and a community of believers." style="top: 70%; left: 30%;">6</div>
+
+  <!-- Floating Text Box -->
+  <div class="text-box" id="text-box"></div>
 
   <script src="assets/script.js"></script>
 </body>

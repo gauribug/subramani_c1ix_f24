@@ -1,124 +1,181 @@
-@font-face {
-  font-family: "tan-mon-cheri";
-  src: url("assets/tan-mon-cheri.woff") format("woff");
-}
-
+/* Body and Background */
 body {
   margin: 0;
-  font-family: "Georgia", serif;
-  background-color: white;
-  color: #000000; 
-  line-height: 1.6;
-}
-
-.container {
-  max-width: 1000px;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-.header {
-  text-align: center;
-  margin-bottom: 30px;
-}
-
-.header h1 {
-  font-size: 10rem;
-  font-family: "sloop-script-one", sans-serif; 
-  font-style: normal;
-  font-weight: 400;  
-  color: #000000; 
-  margin: 0;
-}
-
-.pagination {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-}
-
-.pagination a {
-  text-decoration: underline;
-  color: #ff85a1; 
-  font-family: "Arial", sans-serif;
-  font-size: 1rem;
-  margin: 0 15px;
-}
-
-.pagination a:hover {
-  color: #ff6380; 
-}
-
-.gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-  text-align: center;
-}
-
-.gallery-item img {
-  width: 100%;  /* Make image take up the full width of its container */
-  height: auto;  /* Keep aspect ratio intact */
-  max-width: 400px;  /* Optional: set a max width if needed */
-  object-fit: cover;
-  border-radius: 15px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  cursor: pointer;
-  box-shadow: 0.1px 0.1px 2px rgba(0, 0, 0, 0.5);
-}
-
-.gallery-item img:hover {
-  transform: scale(1.05);
-  box-shadow: 0px 0px 15px 5px rgba(255, 255, 255, 0.7); 
-}
-
-.gallery-item p {
-  margin-top: 10px;
-  font-size: 3rem;
-  color: #000000; 
-  font-family: "sloop-script-one", sans-serif; 
-}
-
-
-.typing-text {
+  padding: 0;
   font-family: "sloop-script-one", sans-serif;
-  font-style: normal;
-  margin: 0;
-  font-size: 2.5rem;
-  color: #ff85a1;
-  margin-top: 20px;
-  white-space: nowrap;
   overflow: hidden;
-  border-right: 4px solid #ffffff;
-  animation: typing 4s steps(40) 1s forwards, blink 0.75s step-end infinite;
-  display: inline-block;
+  height: 100vh;
+  color: white;
 }
 
-@keyframes typing {
-  to {
-    width: 100%; 
+.subheading {
+  text-align: center;
+  font-family: Arial, sans-serif; /* Use Arial font */
+  font-size: 0.75rem; /* Font size for the text */
+  color: white; /* White color text */
+  margin-top: 10px; /* Space between header and subheading */
+}
+
+.background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  z-index: -1; /* Places it behind other content */
+}
+
+/* Header */
+.header {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9rem;
+  text-align: center;
+  color: white;
+  position: relative;
+  z-index: 10; /* For positioning the hover-text */
+}
+
+/* Hover Text (Appears when hovering over the header) */
+.hover-text {
+  display: none; /* Initially hidden */
+  position: absolute;
+  top: 110%; /* Position below the header */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgb(0, 0, 0);
+  color: white;
+  padding: 10px;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 300px;
+  text-align: center;
+  font-size: 1rem;
+  z-index: 200;
+}
+
+.header:hover .hover-text {
+  display: block; /* Show the text when the header is hovered */
+}
+
+/* Hover Elements (Numbers) */
+.hover-element {
+  position: absolute;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: color 0.3s ease, text-decoration 0.3s ease, filter 0.3s ease;
+  font-family: Arial, sans-serif;
+  z-index: 1; /* Keeps them above the background */
+}
+
+.hover-element:hover {
+  color: #f00; /* Glow effect */
+  text-decoration: underline;
+  filter: drop-shadow(0 0 5px #f00);
+}
+
+/* Floating Text Box */
+.text-box {
+  position: absolute;
+  background-color: rgba(0, 0, 0, 0.491);
+  color: white;
+  padding: 10px;
+  border-radius: 8px;
+  display: none;
+  font-family: Arial, sans-serif;
+  font-size: 0.85rem;
+  max-width: 200px;
+  text-align: center;
+  z-index: 100;
+  pointer-events: none;
+}
+
+.text-box h2 {
+  font-family: "sloop-script-one", sans-serif;
+  font-size: 2.5rem;
+  margin: 0 0 10px 0;
+  color: white;
+}
+
+
+/* Blinking Text Box */
+.blinking-text {
+  position: absolute;
+  font-size: 2rem;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+  font-family: "sloop-script-one", sans-serif; /* Use Sloop Script for text */
+  opacity: 0; /* Initially hidden */
+}
+
+/* Positioning the text boxes */
+.top-left {
+  top: 20px;
+  left: 20px;
+  animation: blink-left 2s infinite alternate;
+}
+
+.top-right {
+  top: 20px;
+  right: 20px;
+  animation: blink-right 2s infinite alternate;
+}
+
+/* Keyframes for Left Text Box */
+@keyframes blink-left {
+  0% {
+    opacity: 0;
   }
-}
-
-@keyframes blink {
   50% {
-    border-color: transparent; 
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
   }
 }
 
-@keyframes backgroundColorChange {
- 
-  25% {
-    background-color: lightpink;
+/* Keyframes for Right Text Box */
+@keyframes blink-right {
+  0% {
+    opacity: 1;
   }
-
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-body {
-  margin: 0;
-  font-family: "Georgia", serif;
-  line-height: 1.6;
-  animation: backgroundColorChange 12s infinite;
+@media (max-width: 768px) {
+  .header {
+    font-size: 6rem; /* Reduce header size on smaller screens */
+  }
+  .hover-element {
+    font-size: 1.5rem;
+  }
 }
 
+.line-under-header {
+  text-align: center;
+  font-family: Arial, sans-serif; /* Use Arial font */
+  margin-top: 20px; /* Space between header and the line */
+}
 
+.line-under-header .line {
+  width: 100px; /* Line width */
+  border: 1px solid white; /* White color line */
+  margin-bottom: 10px; /* Space below the line */
+}
+
+.line-under-header span {
+  font-size: 1.5rem; /* Font size for the text */
+  color: white; /* White color text */
+  display: inline-block;
+  padding: 0 10px; /* Padding on both sides of the text */
+}
