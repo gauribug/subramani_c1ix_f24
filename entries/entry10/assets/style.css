@@ -8,13 +8,6 @@ body {
   color: white;
 }
 
-.subheading {
-  text-align: center;
-  font-family: Arial, sans-serif; /* Use Arial font */
-  font-size: 0.75rem; /* Font size for the text */
-  color: white; /* White color text */
-  margin-top: 10px; /* Space between header and subheading */
-}
 
 .background {
   position: fixed;

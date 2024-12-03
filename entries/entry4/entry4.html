@@ -1,48 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="assets/style.css">
-    <link rel="icon" type="image/png" href="assets/favicon.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Illuminate</title>
+  <link rel="stylesheet" href="https://use.typekit.net/ufn4lov.css">
+  <link rel="stylesheet" type="text/css" href="assets/style.css">
+
+
 </head>
 <body>
-    <h1>Lamps</h1>
+  <!-- Header -->
+  <div class="header">
+    Illuminate
+    <div class="subheading">(hover around)</div>
+  </div>
 
-    <style>
-        .container {
-            background-color: rgb(0, 0, 0);
-            display: flex;
-            justify-content:center;
-            align-items: center;
-            
-        }
-    
-        .container-item {
-            background-color: rgb(168, 49, 154);
-            color: rgb(230, 116, 243);
-            text-align: center;
-            margin: 20px;
-            width: 70px;
-            flex-grow: 1;
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 25px;
-        }
-
-    </style>
-
-    <p>
-        <img src="assets/IMG_1790.jpeg" alt="flower1" style="width:400px;height:600px;"> 
-        <img src="assets/IMG_1791.jpeg" alt="flower2" style="width:400px;height:600px;"> 
-        <img src="assets/IMG_1792.jpeg" alt="flower3" style="width:400px;height:600px;">
-    </p>
-
-    <div class="container">
-        <div class="container-item" style="display: flexbox;"
-        flex-grow: ;
-        flex-shrink: ;
-        flex-basis: ;
-        >Quirky lamps can add a fun and personal touch to your space. They often serve as conversation starters and reflect your personality and style. Unique designs can create visual interest, making a room feel more vibrant and cozy. Plus, they can bring a sense of whimsy and creativity into your environment. </div>
+  <div class="background" style="background-image: url('assets/bkg-image.png');"></div>
+  <!-- Images -->
+  <div class="image-container" style="top: 50%; left: 57%;">
+    <img class="default" src="assets/1.png" alt="Image 1">
+    <img class="hover" src="assets/1glow.png" alt="Image 1 Glow">
+  </div>
+  <div class="image-container" style="top: 65%; left: 10%;">
+    <img class="default" src="assets/2.png" alt="Image 2">
+    <img class="hover" src="assets/2glow.png" alt="Image 2 Glow">
+  </div>
+  <div class="image-container" style="top: 0; left: 35%;">
+    <img class="default" src="assets/3.png" alt="Image 3">
+    <img class="hover" src="assets/3glow.png" alt="Image 3 Glow">
+  </div>
+  <div class="image-container" style="top: 34%; left: 20%;">
+    <img class="default" src="assets/4.png" alt="Image 4">
+    <img class="hover" src="assets/4glow.png" alt="Image 4 Glow">
+  </div>
 
 </body>
 </html>
+
+<script src="assets/script.js"></script>
