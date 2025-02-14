@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: black;
+    background-color: grey;
     padding-top: 50px;
   }
 
@@ -45,7 +45,7 @@ body {
     font-family: 'Sloop-Script-one', sans-serif;
     
     font-size: 2rem;
-    color: white;
+    color: black;
   }
   
   .logo-link {
